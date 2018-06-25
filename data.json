@@ -97,7 +97,8 @@
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2600014239-RLD-OS0217-M1.jpg?v=1529460449",
 			"variant_ids": []
 		}
-	}, {
+    },
+    {
 		"id": 33553383433,
 		"title": "1CM TINSEL CHOKER WITH CENTRE RING",
 		"body_html": "<p>Tinsel choker featuring a gold centre ring detail.</p><p>Tinsel choker<br>Gold centre ring detail<br></p>",
@@ -110,7 +111,8 @@
 		"template_suffix": null,
 		"tags": "0.3 Off, Accessories, APItagIndexRemoveThis, Black, Chokers, Fp, ISAWITFIRST.com, Jewellery - From £2, New In Accessories, One Size, Party, Pcat-Accessories, RT_0, Scat-Jewellery, Sp3, XP_120",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 292056465417,
 			"product_id": 33553383433,
 			"title": "OS / BLACK",
@@ -137,21 +139,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
-			"id": 47740583945,
-			"product_id": 33553383433,
-			"name": "SIZE",
-			"position": 1,
-			"values": ["OS"]
-		}, {
-			"id": 124491431945,
-			"product_id": 33553383433,
-			"name": "Colour",
-			"position": 2,
-			"values": ["BLACK"]
-		}],
-		"images": [{
+      }
+    ],
+		"options": [
+      {
+        "id": 47740583945,
+        "product_id": 33553383433,
+        "name": "SIZE",
+        "position": 1,
+        "values": ["OS"]
+      },
+      {
+        "id": 124491431945,
+        "product_id": 33553383433,
+        "name": "Colour",
+        "position": 2,
+        "values": ["BLACK"]
+      }
+    ],
+		"images": [
+      {
 			"id": 4305804853366,
 			"product_id": 33553383433,
 			"position": 1,
@@ -162,7 +169,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2600014596-BCK-OS-1.jpg?v=1529459165",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4305804853366,
 			"product_id": 33553383433,
@@ -175,7 +183,8 @@
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2600014596-BCK-OS-1.jpg?v=1529459165",
 			"variant_ids": []
 		}
-	}, {
+    },
+    {
 		"id": 24650252297,
 		"title": "200cm Long Acrylic Plaid Scarf",
 		"body_html": "<p>Stylish scarf featuring plaid detail, acrylic finish and 200cm length.</p><p>Plaid detail <br>Acrylic finish <br>200cm Length <br></p>",
@@ -188,7 +197,8 @@
 		"template_suffix": "",
 		"tags": "60% Off, Accessories, APItagIndexRemoveThis, Daywear, ISAWITFIRST.com, Multi, ONE SIZE, Pcat-Accessories, Puresale, RT_.02, Sale, Sale:SALE:New In Accessories, Scarves, Scat-Other, XP_311",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 190262378505,
 			"product_id": 24650252297,
 			"title": "OS / MULTI",
@@ -215,21 +225,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+      }
+    ],
+		"options": [
+      {
 			"id": 33555709961,
 			"product_id": 24650252297,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["OS"]
-		}, {
+      },
+      {
 			"id": 124489400329,
 			"product_id": 24650252297,
 			"name": "Colour",
 			"position": 2,
 			"values": ["MULTI"]
-		}],
-		"images": [{
+      }
+    ],
+		"images": [
+      {
 			"id": 4305768906870,
 			"product_id": 24650252297,
 			"position": 1,
@@ -240,7 +255,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2100014677-1.jpg?v=1529459074",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4305768906870,
 			"product_id": 24650252297,
@@ -252,8 +268,9 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2100014677-1.jpg?v=1529459074",
 			"variant_ids": []
-		}
-	}, {
+		  }
+    },
+    {
 		"id": 153086722057,
 		"title": "3 Strap Mesh Bikini Bottom",
 		"body_html": "<p>Prepare for poolside in these high waisted bikini bottoms. They feature a 3 strap mesh hem an an elasticated high waistband. These bikini bottoms are sold as an individual but are part of a matching set.</p><p>High waisted<br>3 strap detail<br>Mesh material</p>",
@@ -266,7 +283,8 @@
 		"template_suffix": null,
 		"tags": "12, 14, 6, 8, <£10, APItagIndexRemoveThis, Bikini, Black, Holiday, Holiday Shop, ISAWITFIRST.com, Mesh, Pcat-Swimwear, RT_0, Sale, Sale:SALE:New In Clothing, Scat-Swimsuit, Swimwear, XP_425",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 1777486725129,
 			"product_id": 153086722057,
 			"title": "6 / BLACK",
@@ -293,7 +311,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 10,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1777486757897,
 			"product_id": 153086722057,
 			"title": "8 / BLACK",
@@ -320,7 +339,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 31,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1777486790665,
 			"product_id": 153086722057,
 			"title": "10 / BLACK",
@@ -347,7 +367,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 30,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1777486823433,
 			"product_id": 153086722057,
 			"title": "12 / BLACK",
@@ -374,7 +395,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 14,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1777486856201,
 			"product_id": 153086722057,
 			"title": "14 / BLACK",
@@ -401,7 +423,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 9,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1777486888969,
 			"product_id": 153086722057,
 			"title": "16 / BLACK",
@@ -428,21 +451,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+      }
+    ],
+		"options": [
+      {
 			"id": 230612860937,
 			"product_id": 153086722057,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["6", "8", "10", "12", "14", "16"]
-		}, {
+      },
+      {
 			"id": 1347042934902,
 			"product_id": 153086722057,
 			"name": "Colour",
 			"position": 2,
 			"values": ["BLACK"]
-		}],
-		"images": [{
+      }
+    ],
+		"images": [
+      {
 			"id": 4305653170294,
 			"product_id": 153086722057,
 			"position": 1,
@@ -453,7 +481,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008098-BCK-1.jpg?v=1529458773",
 			"variant_ids": []
-		}, {
+      },
+      {
 			"id": 4305653203062,
 			"product_id": 153086722057,
 			"position": 2,
@@ -464,7 +493,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008098-BCK-2.jpg?v=1529458773",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4305653170294,
 			"product_id": 153086722057,
@@ -476,8 +506,9 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008098-BCK-1.jpg?v=1529458773",
 			"variant_ids": []
-		}
-	}, {
+		  }
+    },
+    {
 		"id": 759791747190,
 		"title": "3 Strap Mesh Bikini Bottom",
 		"body_html": "<p>Catch those rays and top up that tan in this gorgeous 3 strap detail bikini bottom. Featuring a stylish mesh finish and high waisted fit. Team with our matching bikini top and cute sandals to compliment this look.</p><p>Bikini bottom <br>3 strap detail <br>Mesh finish <br>High waisted </p>",
@@ -490,7 +521,8 @@
 		"template_suffix": null,
 		"tags": "12, 14, 6, 8, <£10, APItagIndexRemoveThis, Bikini, Coral, Holiday, Holiday Shop, ISAWITFIRST.com, Mesh, Pcat-Swimwear, RED, RT_?, Sale, Sale:/Collections/New-In, SALE:New In Clothing, Scat-Swimsuit, Summer Shop Aug, Swimwear, VM199, XP_425",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 8127376294006,
 			"product_id": 759791747190,
 			"title": "6 / RED",
@@ -517,7 +549,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 13,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376326774,
 			"product_id": 759791747190,
 			"title": "8 / Black",
@@ -544,7 +577,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 32,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376359542,
 			"product_id": 759791747190,
 			"title": "10 / Black",
@@ -571,7 +605,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 39,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376392310,
 			"product_id": 759791747190,
 			"title": "12 / Black",
@@ -598,7 +633,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 23,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376425078,
 			"product_id": 759791747190,
 			"title": "14 / Black",
@@ -625,7 +661,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 12,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376457846,
 			"product_id": 759791747190,
 			"title": "16 / RED",
@@ -652,21 +689,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+      }
+    ],
+		"options": [
+      {
 			"id": 1346993127542,
 			"product_id": 759791747190,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["6", "8", "10", "12", "14", "16"]
-		}, {
+      },
+      {
 			"id": 2094125613174,
 			"product_id": 759791747190,
 			"name": "Colour",
 			"position": 2,
 			"values": ["RED", "Black"]
-		}],
-		"images": [{
+      }
+    ],
+		"images": [
+      {
 			"id": 4306089902198,
 			"product_id": 759791747190,
 			"position": 1,
@@ -677,7 +719,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008099-CAL-RESHOOT-1.jpg?v=1529459912",
 			"variant_ids": []
-		}, {
+      },
+      {
 			"id": 4306089934966,
 			"product_id": 759791747190,
 			"position": 2,
@@ -688,7 +731,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008099-CAL-RESHOOT-2.jpg?v=1529459913",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4306089902198,
 			"product_id": 759791747190,
@@ -700,8 +744,9 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008099-CAL-RESHOOT-1.jpg?v=1529459912",
 			"variant_ids": []
-		}
-	}, {
+		  }
+    },
+    {
 		"id": 759791911030,
 		"title": "3 Strap Mesh Bikini Bottom",
 		"body_html": "<p>Look mesmerising in mesh. These bikini bottoms feature a super cute 3 strap mesh detailing. Team with our matching 3 strap mesh bikini top and strappy sandals to complete the look.\r</p><p>Bikini bottom <br>3 strap mesh detail <br>Mesh finish </p>",
@@ -714,7 +759,8 @@
 		"template_suffix": null,
 		"tags": "/Collections/Clothing, 12, 14, 6, 8, <£10, APItagIndexRemoveThis, Bikini, Bright Yellow, Holiday, Holiday Shop, ISAWITFIRST.com, Mesh, Pcat-Swimwear, RT_.04, Sale, Sale:SALE:New In Clothing, Scat-Swimsuit, Swimwear, XP_425, YELLOW",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 8127377211510,
 			"product_id": 759791911030,
 			"title": "6 / YELLOW",
@@ -741,7 +787,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 12,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377244278,
 			"product_id": 759791911030,
 			"title": "8 / Black",
@@ -768,7 +815,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 28,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377277046,
 			"product_id": 759791911030,
 			"title": "10 / Black",
@@ -795,7 +843,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 36,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377309814,
 			"product_id": 759791911030,
 			"title": "12 / Black",
@@ -822,7 +871,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 20,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377342582,
 			"product_id": 759791911030,
 			"title": "14 / Black",
@@ -849,7 +899,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 10,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377375350,
 			"product_id": 759791911030,
 			"title": "16 / YELLOW",
@@ -876,21 +927,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+      }
+    ],
+		"options": [
+      {
 			"id": 1346993324150,
 			"product_id": 759791911030,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["6", "8", "10", "12", "14", "16"]
-		}, {
+      },
+      {
 			"id": 2094128595062,
 			"product_id": 759791911030,
 			"name": "Colour",
 			"position": 2,
 			"values": ["YELLOW", "Black"]
-		}],
-		"images": [{
+      }
+    ],
+		"images": [
+      {
 			"id": 4306097602678,
 			"product_id": 759791911030,
 			"position": 1,
@@ -901,7 +957,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008100-HEW-1.jpg?v=1529459939",
 			"variant_ids": []
-		}, {
+      },
+      {
 			"id": 4306097635446,
 			"product_id": 759791911030,
 			"position": 2,
@@ -912,7 +969,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008100-HEW-2.jpg?v=1529459939",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4306097602678,
 			"product_id": 759791911030,
@@ -924,8 +982,9 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008100-HEW-1.jpg?v=1529459939",
 			"variant_ids": []
-		}
-	}, {
+		  }
+    },
+    {
 		"id": 148855816201,
 		"title": "3 Strap Mesh Bikini Top",
 		"body_html": "<p>Look mesmerising in mesh. These bikini bottoms feature a super cute 3 strap mesh detailing. Team with our matching 3 strap mesh bikini bottoms and strappy sandals to complete the look.\r</p><p>Bikini top<br>3 strap mesh finish <br>Sleeveless<br>Tie up back detail </p>",
@@ -938,7 +997,8 @@
 		"template_suffix": null,
 		"tags": ".5, /Collections/Clothing, 10, 12, 14, 50% Off, 6, 8, APItagIndexRemoveThis, Bikini, Dark Green, GREEN, Holiday, Holiday Shop, ISAWITFIRST.com, Mesh, Pcat-Swimwear, RT_.01, Sale, Sale:SALE:New In Clothing, Scat-Swimsuit, Swimwear, XP_475",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 1748136820745,
 			"product_id": 148855816201,
 			"title": "6 / GREEN",
@@ -965,7 +1025,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1748136853513,
 			"product_id": 148855816201,
 			"title": "8 / GREEN",
@@ -992,7 +1053,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1748136886281,
 			"product_id": 148855816201,
 			"title": "10 / GREEN",
@@ -1019,7 +1081,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1748136919049,
 			"product_id": 148855816201,
 			"title": "12 / GREEN",
@@ -1046,7 +1109,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1748136951817,
 			"product_id": 148855816201,
 			"title": "14 / GREEN",
@@ -1073,7 +1137,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 1748136984585,
 			"product_id": 148855816201,
 			"title": "16 / GREEN",
@@ -1100,21 +1165,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+      }
+    ],
+		"options": [
+      {
 			"id": 225044070409,
 			"product_id": 148855816201,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["6", "8", "10", "12", "14", "16"]
-		}, {
+      },
+      {
 			"id": 287035228169,
 			"product_id": 148855816201,
 			"name": "Colour",
 			"position": 2,
 			"values": ["GREEN"]
-		}],
-		"images": [{
+      }
+    ],
+		"images": [
+      {
 			"id": 4305626202230,
 			"product_id": 148855816201,
 			"position": 1,
@@ -1125,7 +1195,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008087-KKI-1r.jpg?v=1529458707",
 			"variant_ids": []
-		}, {
+      },
+      {
 			"id": 4305626234998,
 			"product_id": 148855816201,
 			"position": 2,
@@ -1136,7 +1207,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008087-KKI-4r_7c004e17-1dec-426f-95bf-abbca49bb4d4.jpg?v=1529458707",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4305626202230,
 			"product_id": 148855816201,
@@ -1148,8 +1220,9 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008087-KKI-1r.jpg?v=1529458707",
 			"variant_ids": []
-		}
-	}, {
+		  }
+    },
+    {
 		"id": 759791878262,
 		"title": "3 Strap Mesh Bikini Top",
 		"body_html": "<p>Catch those rays and top up that tan in this gorgeous 3 strap detail bikini top. Featuring a stylish mesh finish, v neckline and tie up back detail. Team with our matching bikini bottoms and cute sandals to compliment this look. \r</p><p>Bikini top<br>Sleeveless<br>V neck <br>3 strap detail <br>Mesh finish </p>",
@@ -1162,7 +1235,8 @@
 		"template_suffix": null,
 		"tags": "12, 14, 6, 8, <£10, APItagIndexRemoveThis, Bikini, Coral, Holiday, Holiday Shop, ISAWITFIRST.com, Mesh, Pcat-Swimwear, RED, RT_.1, Sale, Sale:/Collections/New-In, SALE:New In Clothing, Scat-Swimsuit, Sleeveless, Summer Shop Aug, Swimwear, V Neck, XP_475",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+      {
 			"id": 8127376752758,
 			"product_id": 759791878262,
 			"title": "6 / RED",
@@ -1189,7 +1263,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 7,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376883830,
 			"product_id": 759791878262,
 			"title": "8 / Black",
@@ -1216,7 +1291,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 21,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376916598,
 			"product_id": 759791878262,
 			"title": "10 / Black",
@@ -1243,7 +1319,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 23,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127376982134,
 			"product_id": 759791878262,
 			"title": "12 / Black",
@@ -1270,7 +1347,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 13,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377047670,
 			"product_id": 759791878262,
 			"title": "14 / Black",
@@ -1297,7 +1375,8 @@
 			"tax_code": "",
 			"old_inventory_quantity": 7,
 			"requires_shipping": true
-		}, {
+      },
+      {
 			"id": 8127377113206,
 			"product_id": 759791878262,
 			"title": "16 / RED",
@@ -1324,21 +1403,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+      }
+    ],
+		"options": [
+      {
 			"id": 1346993291382,
 			"product_id": 759791878262,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["6", "8", "10", "12", "14", "16"]
-		}, {
+      },
+      {
 			"id": 2094130987126,
 			"product_id": 759791878262,
 			"name": "Colour",
 			"position": 2,
 			"values": ["RED", "Black"]
-		}],
-		"images": [{
+      }
+    ],
+		"images": [
+      {
 			"id": 4306103304310,
 			"product_id": 759791878262,
 			"position": 1,
@@ -1349,7 +1433,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008088-CAL-RESHOOT-1.jpg?v=1529459953",
 			"variant_ids": []
-		}, {
+      },
+      {
 			"id": 4306103337078,
 			"product_id": 759791878262,
 			"position": 2,
@@ -1360,7 +1445,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008088-CAL-RESHOOT-2.jpg?v=1529459953",
 			"variant_ids": []
-		}],
+      }
+    ],
 		"image": {
 			"id": 4306103304310,
 			"product_id": 759791878262,
@@ -1372,6 +1458,7 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/S17W-4200008088-CAL-RESHOOT-1.jpg?v=1529459953",
 			"variant_ids": []
-		}
-	}]
+		  }
+    }
+  ]
 }
