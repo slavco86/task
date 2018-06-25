@@ -13,7 +13,8 @@
 		"template_suffix": null,
 		"tags": ".5, 50% Off, Accessories, APItagIndexRemoveThis, Chokers, Going Out Looks, ISAWITFIRST.com, METALLIC, Mid Pink, Necklace, ONE SIZE, Pcat-Accessories, RT_0, Sale, Sale:SALE:New In Accessories, Scat-Jewellery, XP_90",
 		"published_scope": "web",
-		"variants": [{
+		"variants": [
+    {
 			"id": 956458434569,
 			"product_id": 87481417737,
 			"title": "OS / RED",
@@ -40,21 +41,26 @@
 			"tax_code": "",
 			"old_inventory_quantity": 0,
 			"requires_shipping": true
-		}],
-		"options": [{
+    }
+  ],
+		"options": [
+    {
 			"id": 137336389641,
 			"product_id": 87481417737,
 			"name": "SIZE",
 			"position": 1,
 			"values": ["OS"]
-		}, {
+    },
+    {
 			"id": 139125882889,
 			"product_id": 87481417737,
 			"name": "Colour",
 			"position": 2,
 			"values": ["RED"]
-		}],
-		"images": [{
+    }
+  ],
+		"images": [
+    {
 			"id": 4306280317046,
 			"product_id": 87481417737,
 			"position": 1,
@@ -65,7 +71,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2600014239-RLD-OS0217-M1.jpg?v=1529460449",
 			"variant_ids": []
-		}, {
+    },
+    {
 			"id": 4306280349814,
 			"product_id": 87481417737,
 			"position": 2,
@@ -76,7 +83,8 @@
 			"height": 2098,
 			"src": "https://cdn.shopify.com/s/files/1/1962/2013/products/A17W-2600014239-RLD-2.jpg?v=1529460449",
 			"variant_ids": []
-		}],
+    }
+    ],
 		"image": {
 			"id": 4306280317046,
 			"product_id": 87481417737,
