@@ -1,5 +1,13 @@
 $(document).ready(function() {
-  let productCol = []
+  const productCol = []
+  const table = $('#jsonData')
+
+  function getVariants(variants) {
+    if (variants.length > 0) {
+      console.info(variants)
+    }
+  }
+
   $.getJSON('data.json', function(data) {
     data.products.forEach(product => {
       productCol.push(product)
@@ -7,8 +15,21 @@ $(document).ready(function() {
   })
   .then(() => {
     productCol.forEach(product => {
-      $('#jsonData').append(`<li>${product.title}</li>`)
+      table.append(`
+      <tr>
+        <td>${product.title}</td>
+        <td>${getVariants(product.variants)}</td>
+        <td>
+          ${product.variants.weight}
+          ${product.variants.weight_unit}
+        </td>
+        <td>
+          <img src="${product.image.src}"/>
+        </td>
+      </tr>`);
     });
   })
-  .then()
+  .then(() => {
+
+  })
 })
