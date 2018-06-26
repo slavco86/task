@@ -1,4 +1,13 @@
 body h1 {
   color: red;
 }
+
+body #jsonData tr td {
+  width: auto;
+}
+
+body #jsonData tr td img {
+  width: 10%;
+  height: auto;
+}
 /*# sourceMappingURL=styles.css.map */

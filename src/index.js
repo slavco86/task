@@ -3,8 +3,8 @@ $(document).ready(function() {
   const table = $('#jsonData')
 
   function getVariants(variants) {
+    console.info(variants)
     if (variants.length > 0) {
-      console.info(variants)
     }
   }
 
@@ -18,18 +18,15 @@ $(document).ready(function() {
       table.append(`
       <tr>
         <td>${product.title}</td>
-        <td>${getVariants(product.variants)}</td>
+        <td>${product.variants[0].price}</td>
         <td>
-          ${product.variants.weight}
-          ${product.variants.weight_unit}
+          ${product.variants[0].weight}
+          ${product.variants[0].weight_unit}
         </td>
         <td>
           <img src="${product.image.src}"/>
         </td>
       </tr>`);
     });
-  })
-  .then(() => {
-
   })
 })

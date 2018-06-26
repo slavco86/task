@@ -2,4 +2,15 @@ body {
   h1 {
     color: red;
   }
+  #jsonData {
+    tr {
+      td {
+        width: auto;
+        img {
+          width: 10%;
+          height: auto;
+        }
+      }
+    }
+  }
 }
