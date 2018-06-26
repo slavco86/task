@@ -1,15 +1,14 @@
 $(document).ready(function() {
-  let products = []
+  let productCol = []
   $.getJSON('data.json', function(data) {
     data.products.forEach(product => {
-      products.push(product)
+      productCol.push(product)
     });
-    console.info(products);
-    return products
-  }).then(products => {
-    console.info(products.products)
-    products.products.forEach(product => {
+  })
+  .then(() => {
+    productCol.forEach(product => {
       $('#jsonData').append(`<li>${product.title}</li>`)
     });
   })
+  .then()
 })
