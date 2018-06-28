@@ -12,6 +12,21 @@ $(document).ready(function() {
     }
   }
 
+  function filterProducts(options, products) {
+    let filteredProducts = []
+    products.forEach(product => {
+      if (typeof options.prices !== 'undefined' || options.prices.length !== 0) {
+        options.prices.forEach(price => {
+          product.variants = product.variants.filter(variant => variant.price === price)
+        })
+      }
+      if (product.variants.length > 0) {
+        filteredProducts.push(product)
+      }
+    })
+    return filteredProducts
+  }
+
   $.getJSON('data.json', function(data) {
     data.products.forEach(product => {
       products.push(product)
@@ -34,23 +49,24 @@ $(document).ready(function() {
     });
   })
   .then(() => {
-    console.info('Prices: ' + prices);
-    console.info('Sizes: ' + sizes);
-    console.info('Colours: ' + colors);
-    console.info('Categories: ' + categories);
-    products.forEach(product => {
-      table.append(`
-      <tr>
-        <td>${product.title}</td>
-        <td>${product.variants[0].price}</td>
-        <td>
-          ${product.variants[0].weight}
-          ${product.variants[0].weight_unit}
-        </td>
-        <td>
-          <img src="${product.image.src}"/>
-        </td>
-      </tr>`);
-    });
+    // console.info('Prices: ' + prices);
+    // console.info('Sizes: ' + sizes);
+    // console.info('Colours: ' + colors);
+    // console.info('Categories: ' + categories);
+    console.info('Filtered Products: ' + filterProducts({prices:['1.00','12.00']}, products))
+    // products.forEach(product => {
+    //   table.append(`
+    //   <tr>
+    //     <td>${product.title}</td>
+    //     <td>${product.variants[0].price}</td>
+    //     <td>
+    //       ${product.variants[0].weight}
+    //       ${product.variants[0].weight_unit}
+    //     </td>
+    //     <td>
+    //       <img src="${product.image.src}"/>
+    //     </td>
+    //   </tr>`);
+    // });
   })
 })
