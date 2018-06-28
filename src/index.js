@@ -3,6 +3,7 @@ $(document).ready(function() {
   const table = $('#jsonData')
   const prices = []
   const colors = []
+  const sizes = []
   const categories = []
 
   function getCollection(value, array) {
@@ -17,10 +18,19 @@ $(document).ready(function() {
       product.variants.forEach(variant => {
         getCollection(variant.price, prices)
       })
+      product.options.forEach(option => {
+        if (option.name === 'SIZE') {
+          option.values.forEach(value => {
+            getCollection(value, sizes)
+          })
+        }
+      })
+
     });
   })
   .then(() => {
     console.info('Prices: ' + prices);
+    console.info('Sizes: ' + sizes);
     products.forEach(product => {
       table.append(`
       <tr>
