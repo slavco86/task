@@ -24,13 +24,20 @@ $(document).ready(function() {
             getCollection(value, sizes)
           })
         }
+        if (option.name === 'Colour') {
+          option.values.forEach(value => {
+            getCollection(value.toLowerCase(), colors)
+          })
+        }
       })
+
 
     });
   })
   .then(() => {
     console.info('Prices: ' + prices);
     console.info('Sizes: ' + sizes);
+    console.info('Colours: ' + colors);
     products.forEach(product => {
       table.append(`
       <tr>
