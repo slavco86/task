@@ -15,6 +15,7 @@ $(document).ready(function() {
   $.getJSON('data.json', function(data) {
     data.products.forEach(product => {
       products.push(product)
+      getCollection(product.product_type.toLowerCase(), categories)
       product.variants.forEach(variant => {
         getCollection(variant.price, prices)
       })
@@ -30,14 +31,13 @@ $(document).ready(function() {
           })
         }
       })
-
-
     });
   })
   .then(() => {
     console.info('Prices: ' + prices);
     console.info('Sizes: ' + sizes);
     console.info('Colours: ' + colors);
+    console.info('Categories: ' + categories);
     products.forEach(product => {
       table.append(`
       <tr>
