@@ -12,6 +12,46 @@ $(document).ready(function() {
     }
   }
 
+  function filterByColours(colours, products) {
+    const variants = []
+    colours.forEach(colour => {
+      products.forEach(product => {
+        product.variants.forEach(variant => {
+          if(variant.option2 === colour) {
+            variants.push(variant)
+          }
+        })
+      })
+    })
+    return variants
+  }
+
+  function filterBySizes(sizes, products) {
+    const variants = []
+    sizes.forEach(size => {
+      products.forEach(product => {
+        product.variants.forEach(variant => {
+          if(variant.option1 === size) {
+            variants.push(variant)
+          }
+        })
+      })
+    })
+    return variants
+  }
+
+  function filterByCategory(categories, products) {
+    const newProducts = []
+    categories.forEach(category => {
+      products.forEach(product => {
+          if(product.product_type === category) {
+            newProducts.push(product)
+          }
+      })
+    })
+    return newProducts
+  }
+
   function filterByPrice(priceRange, products) {
     const minPrice = parseFloat(priceRange[0])
     const maxPrice = parseFloat(priceRange[1])
@@ -28,17 +68,32 @@ $(document).ready(function() {
     return variants
   }
 
-  function filterProducts(options, products) {
-    let stock = products;
-    let filteredProducts = [];
-    filterByPrice(options.prices, stock).forEach(variant => {
+  function getProductsById (variants, stock) {
+    let uniques = []
+    variants.forEach(variant => {
       stock.forEach(product => {
         if(product.id === variant.product_id) {
-          getCollection(product, filteredProducts)
+          getCollection(product, uniques)
         }
       })
     })
-    return filteredProducts
+    return uniques
+  }
+
+  function filterProducts(options, products) {
+    let stock = products;
+    const result = []
+    let filteredProducts = [];
+    filteredProducts.push(getProductsById(filterByPrice(options.prices, stock), stock))
+    filteredProducts.push(getProductsById(filterByColours(options.colours, stock), stock))
+    filteredProducts.push(getProductsById(filterBySizes(options.sizes, stock), stock))
+    filteredProducts.push(filterByCategory(options.categories, stock))
+    filteredProducts.forEach(collection => {
+      collection.forEach(product => {
+        getCollection(product, result)
+      })
+    })
+    return result
   }
 
   $.getJSON('data.json', function(data) {
@@ -67,7 +122,13 @@ $(document).ready(function() {
     // console.info('Sizes: ' + sizes);
     // console.info('Colours: ' + colors);
     // console.info('Categories: ' + categories);
-    filterProducts({prices:['1.00','12.00']},products).forEach(product=> console.info(product))
+    filterProducts({
+        prices:['10.00','12.00'],
+        colours:["BLACK","RED"],
+        sizes:["6","10"],
+        categories:["SWIMWEAR"]
+      },products)
+    .forEach(product=> console.info(product))
     // products.forEach(product => {
     //   table.append(`
     //   <tr>
