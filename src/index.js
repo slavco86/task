@@ -12,18 +12,39 @@ $(document).ready(function() {
     }
   }
 
-  function filterProducts(options, products) {
-    let filteredProducts = []
+  function filterByPrice(priceRange, products) {
+    const minPrice = parseFloat(priceRange[0])
+    const maxPrice = parseFloat(priceRange[1])
+    variants = []
+
     products.forEach(product => {
-      if (typeof options.prices !== 'undefined' || options.prices.length !== 0) {
-        options.prices.forEach(price => {
-          product.variants = product.variants.filter(variant => variant.price === price)
-        })
-      }
-      if (product.variants.length > 0) {
-        filteredProducts.push(product)
-      }
+      product.variants.forEach(variant => {
+        let variantPrice = parseFloat(variant.price)
+        if(variantPrice >= minPrice && variantPrice <= maxPrice) {
+          variants.push(variant)
+        }
+      })
     })
+    return variants
+  }
+
+  function filterProducts(options, products) {
+    let stock = products;
+    let filteredProducts = [];
+    filterByPrice(options.prices, stock).forEach(variant => {
+      stock.forEach(product => {
+        if(product.id === variant.product_id) {
+          getCollection(product, filteredProducts)
+        }
+      })
+    })
+    // stock.forEach(product => {
+    //   product.variants.forEach(variant => {
+    //     if(parseFloat(variant.price) >= options.prices[0] || parseFloat(variant.price) <= options.prices[1]) {
+    //       variants.push(variant)
+    //     }
+    //   })
+    // })
     return filteredProducts
   }
 
@@ -53,7 +74,7 @@ $(document).ready(function() {
     // console.info('Sizes: ' + sizes);
     // console.info('Colours: ' + colors);
     // console.info('Categories: ' + categories);
-    console.info('Filtered Products: ' + filterProducts({prices:['1.00','12.00']}, products))
+    filterProducts({prices:['1.00','12.00']},products).forEach(product=> console.info(product))
     // products.forEach(product => {
     //   table.append(`
     //   <tr>
