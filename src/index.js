@@ -38,13 +38,6 @@ $(document).ready(function() {
         }
       })
     })
-    // stock.forEach(product => {
-    //   product.variants.forEach(variant => {
-    //     if(parseFloat(variant.price) >= options.prices[0] || parseFloat(variant.price) <= options.prices[1]) {
-    //       variants.push(variant)
-    //     }
-    //   })
-    // })
     return filteredProducts
   }
 
