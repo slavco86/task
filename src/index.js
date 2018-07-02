@@ -30,7 +30,6 @@ $(document).ready(function() {
   }
 
   function filterBySizes(sizes, products) {
-    const variants = []
     sizes.forEach(size => {
       products.forEach(product => {
         product.variants.forEach(variant => {
@@ -69,35 +68,19 @@ $(document).ready(function() {
     return products.filter(product => product.variants.length > 0)
   }
 
-  function getProductsById (variants, stock) {
-    let uniques = []
-    variants.forEach(variant => {
-      stock.forEach(product => {
-        if(product.id === variant.product_id) {
-          getCollection(product, uniques)
-        }
-      })
-    })
-    return uniques
-  }
-
   function filterProducts(options, products) {
     let stock = products;
     if(options.prices) {
       stock = filterByPrice(options.prices, stock);
-      console.info(stock);
     }
     if(options.colours) {
-      stock = filterByColours(options.colours, stock)
-      console.info(stock);
+      stock = filterByColours(options.colours, stock);
     }
     if(options.sizes) {
-      stock = filterBySizes(options.sizes, stock)
-      console.info(stock)
+      stock = filterBySizes(options.sizes, stock);
     }
     if(options.categories) {
-      stock = filterByCategory(options.categories, stock)
-      console.info(stock)
+      stock = filterByCategory(options.categories, stock);
     }
     return stock
   }
