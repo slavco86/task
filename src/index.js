@@ -13,17 +13,20 @@ $(document).ready(function() {
   }
 
   function filterByColours(colours, products) {
-    const variants = []
     colours.forEach(colour => {
       products.forEach(product => {
         product.variants.forEach(variant => {
-          if(variant.option2 === colour) {
-            variants.push(variant)
+          if (variant.option2.toLowerCase() === colour.toLowerCase()) {
+            variant.colourMatch = true
           }
         })
       })
     })
-    return variants
+    products.forEach(product => {
+      product.variants = product.variants.filter(variant => variant.colourMatch)
+    })
+    products = products.filter(product => product.variants.length > 0)
+    return products
   }
 
   function filterBySizes(sizes, products) {
@@ -31,41 +34,39 @@ $(document).ready(function() {
     sizes.forEach(size => {
       products.forEach(product => {
         product.variants.forEach(variant => {
-          if(variant.option1 === size) {
-            variants.push(variant)
+          if (variant.option1.toLowerCase() === size.toLowerCase() || variant.option1.toLowerCase() === "os") {
+            variant.sizeMatch = true
           }
         })
       })
     })
-    return variants
+    products.forEach(product => {
+      product.variants = product.variants.filter(variant => variant.sizeMatch)
+    })
+    products = products.filter(product => product.variants.length > 0)
+    return products
   }
 
   function filterByCategory(categories, products) {
-    const newProducts = []
     categories.forEach(category => {
       products.forEach(product => {
-          if(product.product_type === category) {
-            newProducts.push(product)
+          if(product.product_type.toLowerCase() === category.toLowerCase()) {
+            product.matchCategory = true
           }
       })
     })
-    return newProducts
+    products = products.filter(product => product.matchCategory)
+    return products
   }
 
   function filterByPrice(priceRange, products) {
     const minPrice = parseFloat(priceRange[0])
     const maxPrice = parseFloat(priceRange[1])
-    variants = []
 
     products.forEach(product => {
-      product.variants.forEach(variant => {
-        let variantPrice = parseFloat(variant.price)
-        if(variantPrice >= minPrice && variantPrice <= maxPrice) {
-          variants.push(variant)
-        }
-      })
+      product.variants = product.variants.filter(variant => (parseFloat(variant.price)>=minPrice && parseFloat(variant.price) <= maxPrice))
     })
-    return variants
+    return products.filter(product => product.variants.length > 0)
   }
 
   function getProductsById (variants, stock) {
@@ -82,18 +83,23 @@ $(document).ready(function() {
 
   function filterProducts(options, products) {
     let stock = products;
-    const result = []
-    let filteredProducts = [];
-    filteredProducts.push(getProductsById(filterByPrice(options.prices, stock), stock))
-    filteredProducts.push(getProductsById(filterByColours(options.colours, stock), stock))
-    filteredProducts.push(getProductsById(filterBySizes(options.sizes, stock), stock))
-    filteredProducts.push(filterByCategory(options.categories, stock))
-    filteredProducts.forEach(collection => {
-      collection.forEach(product => {
-        getCollection(product, result)
-      })
-    })
-    return result
+    if(options.prices) {
+      stock = filterByPrice(options.prices, stock);
+      console.info(stock);
+    }
+    if(options.colours) {
+      stock = filterByColours(options.colours, stock)
+      console.info(stock);
+    }
+    if(options.sizes) {
+      stock = filterBySizes(options.sizes, stock)
+      console.info(stock)
+    }
+    if(options.categories) {
+      stock = filterByCategory(options.categories, stock)
+      console.info(stock)
+    }
+    return stock
   }
 
   $.getJSON('data.json', function(data) {
@@ -123,10 +129,8 @@ $(document).ready(function() {
     // console.info('Colours: ' + colors);
     // console.info('Categories: ' + categories);
     filterProducts({
-        prices:['10.00','12.00'],
-        colours:["BLACK","RED"],
-        sizes:["6","10"],
-        categories:["SWIMWEAR"]
+        colours:["black" ,"RED"],
+        categories:["JEWELLERY"]
       },products)
     .forEach(product=> console.info(product))
     // products.forEach(product => {
