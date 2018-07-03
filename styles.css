@@ -2,12 +2,19 @@ body h1 {
   color: red;
 }
 
-body #jsonData tr td {
-  width: auto;
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-body #jsonData tr td img {
-  width: 10%;
-  height: auto;
+.colour {
+  border: 2px solid;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
 }
 /*# sourceMappingURL=styles.css.map */

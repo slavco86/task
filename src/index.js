@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const products = []
-  const table = $('#jsonData')
+  const productContainer = $('.productada')
   const prices = []
   const colors = []
   const sizes = []
@@ -85,9 +85,9 @@ $(document).ready(function() {
     return stock
   }
 
-  function renderProducts(products) {
+  function renderProducts(products, container) {
     products.forEach(product => {
-      table.append(`
+      container.append(`
       <tr>
         <td>${product.title}</td>
         <td>${product.variants[0].price}</td>
@@ -127,6 +127,6 @@ $(document).ready(function() {
     renderProducts(filterProducts({
         colours:["black" ,"RED"],
         categories:["JEWELLERY"]
-      },products))
+      },products), productContainer)
   })
 })

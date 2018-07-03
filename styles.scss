@@ -2,15 +2,15 @@ body {
   h1 {
     color: red;
   }
-  #jsonData {
-    tr {
-      td {
-        width: auto;
-        img {
-          width: 10%;
-          height: auto;
-        }
-      }
-    }
-  }
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.colour {
+  border: 2px solid;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
 }
