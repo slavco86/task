@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const products = []
-  const productContainer = $('.productada')
+  const productContainer = $('.products')
   const prices = []
   const colors = []
   const sizes = []
@@ -88,17 +88,33 @@ $(document).ready(function() {
   function renderProducts(products, container) {
     products.forEach(product => {
       container.append(`
-      <tr>
-        <td>${product.title}</td>
-        <td>${product.variants[0].price}</td>
-        <td>
-          ${product.variants[0].weight}
-          ${product.variants[0].weight_unit}
-        </td>
-        <td>
-          <img src="${product.image.src}"/>
-        </td>
-      </tr>`);
+      <div class="product">
+            <div class="image">
+              <img src="${product.image.src}" alt="">
+            </div>
+          <span class="title">${product.title}</span>
+          <div class="prices">
+            <span class="now-price">${product.variants[0].price}</span>
+            ${(product.variants[0].compare_at_price === null) ? '' :
+            `<span class="savings">
+              (
+                ${Math.round(product.variants[0].price / Math.round(product.variants[0].compare_at_price)
+                * 100)}%)
+            </span>`}
+            ${(product.variants[0].compare_at_price === null) ? '' :
+            `<del class="was-price">
+              ${product.variants[0].compare_at_price}
+            </del>
+            `}
+          </div>
+          <div class="sizes">
+            ${product.options[0].values.map(size => `<span class="size">${size}</span>`).join("")}
+          </div>
+          <div class="colours">
+            ${product.options[1].values.map(colour => `<div class="colour" style="background:${colour}; border-color:${colour}"></div>`).join("")}
+          </div>
+        </div>
+      `);
     });
   }
 
@@ -125,8 +141,7 @@ $(document).ready(function() {
   })
   .then(() => {
     renderProducts(filterProducts({
-        colours:["black" ,"RED"],
-        categories:["JEWELLERY"]
+
       },products), productContainer)
   })
 })

@@ -7,6 +7,12 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.size {
+  border: 2px solid;
+  padding: .5rem 1rem;
+  background: lightgrey;
+  display: inline-block;
+}
 .colour {
   border: 2px solid;
   border-radius: 50%;
