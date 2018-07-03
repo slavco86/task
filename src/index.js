@@ -85,6 +85,23 @@ $(document).ready(function() {
     return stock
   }
 
+  function renderProducts(products) {
+    products.forEach(product => {
+      table.append(`
+      <tr>
+        <td>${product.title}</td>
+        <td>${product.variants[0].price}</td>
+        <td>
+          ${product.variants[0].weight}
+          ${product.variants[0].weight_unit}
+        </td>
+        <td>
+          <img src="${product.image.src}"/>
+        </td>
+      </tr>`);
+    });
+  }
+
   $.getJSON('data.json', function(data) {
     data.products.forEach(product => {
       products.push(product)
@@ -107,28 +124,9 @@ $(document).ready(function() {
     });
   })
   .then(() => {
-    // console.info('Prices: ' + prices);
-    // console.info('Sizes: ' + sizes);
-    // console.info('Colours: ' + colors);
-    // console.info('Categories: ' + categories);
-    filterProducts({
+    renderProducts(filterProducts({
         colours:["black" ,"RED"],
         categories:["JEWELLERY"]
-      },products)
-    .forEach(product=> console.info(product))
-    // products.forEach(product => {
-    //   table.append(`
-    //   <tr>
-    //     <td>${product.title}</td>
-    //     <td>${product.variants[0].price}</td>
-    //     <td>
-    //       ${product.variants[0].weight}
-    //       ${product.variants[0].weight_unit}
-    //     </td>
-    //     <td>
-    //       <img src="${product.image.src}"/>
-    //     </td>
-    //   </tr>`);
-    // });
+      },products))
   })
 })
