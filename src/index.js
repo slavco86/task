@@ -89,7 +89,6 @@
     if(options.categories.length > 0) {
       stock = filterByCategory(options.categories, stock);
     }
-    console.info(stock)
     return stock
   }
 
