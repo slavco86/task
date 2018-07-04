@@ -118,7 +118,7 @@
             ${product.options[0].values.map(size => `<span class="size">${size}</span>`).join("")}
           </div>
           <div class="colours">
-            ${product.options[1].values.map(colour => `<div class="colour" style="background:${colour}; border-color:${colour}"></div>`).join("")}
+            ${product.options[1].values.map(colour => `<div class="colour" style="background:${colour.toLowerCase()}; border-color:${colour.toLowerCase()}"></div>`).join("")}
           </div>
         </div>
       `);
