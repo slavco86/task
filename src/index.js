@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
   const products = []
   const productContainer = $('.products')
   const uiContainer = $('.ui')
@@ -6,6 +6,7 @@ $(document).ready(function() {
   const colours = []
   const sizes = []
   const categories = []
+  const filterOptions = {}
 
   function getCollection(value, array) {
     if ($.inArray(value, array) === -1) {
@@ -119,13 +120,8 @@ $(document).ready(function() {
     });
   }
 
-  function renderUi(prices, sizes, colours, categories, container) {
+  function renderUi(sizes, colours, categories, container) {
     container.append(`
-    <div class="price-select">
-      <label for="price-range">Price Range:</label>
-      <input id="price-range" type="text">
-      <div class="price-range"></div>
-    </div>
     <div class="size-select">
     <span class="sizes-title">sizes:</span>
       ${sizes.map(size => `
@@ -175,7 +171,7 @@ $(document).ready(function() {
     // renderProducts(filterProducts({
 
     // },products), productContainer);
-    renderUi(prices, sizes, colours, categories, uiContainer)
+    renderUi(sizes, colours, categories, uiContainer)
     $('.price-range').slider({
       step: 0.01,
       range: true,
@@ -183,10 +179,14 @@ $(document).ready(function() {
       max: Math.max(...prices),
       values: prices,
       slide(event, ui) {
-        $('#price-range').val(parseFloat(ui.values[0]) + '-' + parseFloat(ui.values[1]))
+        $('#price-range').val(parseFloat(ui.values[0]) + '-' + parseFloat(ui.values[1])).change()
       }
     });
     $('.price-range').slider('values', 1, Math.max(...prices))
     $('#price-range').val($('.price-range').slider('values', 0) + '-' + $('.price-range').slider('values', 1));
+    $('#price-range').change(() => {
+      filterOptions.prices = $('#price-range').val().split(/-/)
+    })
+    console.info(filterOptions);
   })
-})
+// })
