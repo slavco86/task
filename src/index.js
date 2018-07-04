@@ -19,9 +19,9 @@
     }
   }
 
-  function filterByColours(colours, products) {
+  function filterByColours(colours, filterProducts) {
     colours.forEach(colour => {
-      products.forEach(product => {
+      filterProducts.forEach(product => {
         product.variants.forEach(variant => {
           if (variant.option2.toLowerCase() === colour.toLowerCase()) {
             variant.colourMatch = true
@@ -29,16 +29,16 @@
         })
       })
     })
-    products.forEach(product => {
+    filterProducts.forEach(product => {
       product.variants = product.variants.filter(variant => variant.colourMatch)
     })
-    products = products.filter(product => product.variants.length > 0)
-    return products
+    filterProducts = filterProducts.filter(product => product.variants.length > 0)
+    return filterProducts
   }
 
-  function filterBySizes(sizes, products) {
+  function filterBySizes(sizes, filterProducts) {
     sizes.forEach(size => {
-      products.forEach(product => {
+      filterProducts.forEach(product => {
         product.variants.forEach(variant => {
           if (variant.option1.toLowerCase() === size.toLowerCase() || variant.option1.toLowerCase() === "os") {
             variant.sizeMatch = true
@@ -46,49 +46,50 @@
         })
       })
     })
-    products.forEach(product => {
+    filterProducts.forEach(product => {
       product.variants = product.variants.filter(variant => variant.sizeMatch)
     })
-    products = products.filter(product => product.variants.length > 0)
-    return products
+    filterProducts = filterProducts.filter(product => product.variants.length > 0)
+    return filterProducts
   }
 
-  function filterByCategory(categories, products) {
+  function filterByCategory(categories, filterProducts) {
     categories.forEach(category => {
-      products.forEach(product => {
+      filterProducts.forEach(product => {
           if(product.product_type.toLowerCase() === category.toLowerCase()) {
             product.matchCategory = true
           }
       })
     })
-    products = products.filter(product => product.matchCategory)
-    return products
+    filterProducts = filterProducts.filter(product => product.matchCategory)
+    return filterProducts
   }
 
-  function filterByPrice(priceRange, products) {
+  function filterByPrice(priceRange, filterProducts) {
     const minPrice = parseFloat(priceRange[0])
     const maxPrice = parseFloat(priceRange[1])
 
-    products.forEach(product => {
+    filterProducts.forEach(product => {
       product.variants = product.variants.filter(variant => (parseFloat(variant.price)>=minPrice && parseFloat(variant.price) <= maxPrice))
     })
-    return products.filter(product => product.variants.length > 0)
+    return filterProducts.filter(product => product.variants.length > 0)
   }
 
   function filterProducts(options, products) {
-    let stock = products;
-    if(options.prices) {
+    let stock = $.extend(true, [], products);
+    if(options.prices.length > 0) {
       stock = filterByPrice(options.prices, stock);
     }
-    if(options.colours) {
+    if(options.colours.length > 0) {
       stock = filterByColours(options.colours, stock);
     }
-    if(options.sizes) {
+    if(options.sizes.length > 0) {
       stock = filterBySizes(options.sizes, stock);
     }
-    if(options.categories) {
+    if(options.categories.length > 0) {
       stock = filterByCategory(options.categories, stock);
     }
+    console.info(stock)
     return stock
   }
 
@@ -99,7 +100,7 @@
             <div class="image">
               <img src="${product.image.src}" alt="">
             </div>
-          <span class="title">${product.title}</span>
+          <span class="product-title">${product.title}</span>
           <div class="prices">
             <span class="now-price">${product.variants[0].price}</span>
             ${(product.variants[0].compare_at_price === null) ? '' :
@@ -127,22 +128,22 @@
 
   function renderUi(sizes, colours, categories, container) {
     container.append(`
-    <div class="size-select">
-    <span class="sizes-title">sizes:</span>
+    <div class="option-select size-select option-select--checkboxes">
+    <span class="select-title">sizes</span>
       ${sizes.map(size => `
         <label for="size-${size}">${size}</label>
         <input id="size-${size}" type="checkbox" value="${size}">
       `).join("")}
     </div>
-    <div class="colours-select">
-      <span class="colours-title">colours:</span>
+    <div class="option-select colours-select option-select--checkboxes">
+      <span class="select-title">colours</span>
       ${colours.map(colour => `
         <label for="${colour}">${colour}</label>
         <input id="${colour}" value="${colour}" type="checkbox">
       `).join("")}
     </div>
-    <div class="categories-select">
-      <span class="categories-title">categories:</span>
+    <div class="option-select categories-select option-select--checkboxes">
+      <span class="select-title">categories</span>
       ${categories.map(category => `
         <label for="${category}">${category}</label>
         <input id="${category}" value="${category}" type="checkbox">
@@ -183,10 +184,6 @@
     });
   })
   .then(() => {
-    // renderProducts(filterProducts({
-
-    // },products), productContainer);
-    renderUi(sizes, colours, categories, uiContainer)
     $('.price-range').slider({
       step: 0.01,
       range: true,
@@ -202,6 +199,8 @@
     $('#price-range').change(() => {
       filterOptions.prices = $('#price-range').val().split(/-/)
     })
+    renderUi(sizes, colours, categories, uiContainer);
+    renderProducts(filterProducts(filterOptions, products), productContainer);
     console.info(filterOptions);
   })
 // })
