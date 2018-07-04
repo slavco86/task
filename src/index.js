@@ -201,6 +201,9 @@
     })
     renderUi(sizes, colours, categories, uiContainer);
     renderProducts(filterProducts(filterOptions, products), productContainer);
-    console.info(filterOptions);
+    $('input').change(() => {
+      productContainer.empty();
+      renderProducts(filterProducts(filterOptions, products), productContainer);
+    })
   })
 // })
