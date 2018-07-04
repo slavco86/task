@@ -24,4 +24,10 @@ body h1 {
   height: 15px;
   display: inline-block;
 }
+
+.sizes-title,
+.colours-title,
+.categories-title {
+  display: block;
+}
 /*# sourceMappingURL=styles.css.map */

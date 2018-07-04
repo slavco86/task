@@ -1,8 +1,9 @@
 $(document).ready(function() {
   const products = []
   const productContainer = $('.products')
+  const uiContainer = $('.ui')
   const prices = []
-  const colors = []
+  const colours = []
   const sizes = []
   const categories = []
 
@@ -118,6 +119,37 @@ $(document).ready(function() {
     });
   }
 
+  function renderUi(prices, sizes, colours, categories, container) {
+    container.append(`
+    <div class="price-select">
+      <label for="price-range">Price Range:</label>
+      <input id="price-range" type="text">
+      <div class="price-range"></div>
+    </div>
+    <div class="size-select">
+    <span class="sizes-title">sizes:</span>
+      ${sizes.map(size => `
+        <label for="size-${size}">${size}</label>
+        <input id="size-${size}" type="checkbox" value="${size}">
+      `).join("")}
+    </div>
+    <div class="colours-select">
+      <span class="colours-title">colours:</span>
+      ${colours.map(colour => `
+        <label for="${colour}">${colour}</label>
+        <input id="${colour}" value="${colour}" type="checkbox">
+      `).join("")}
+    </div>
+    <div class="categories-select">
+      <span class="categories-title">categories:</span>
+      ${categories.map(category => `
+        <label for="${category}">${category}</label>
+        <input id="${category}" value="${category}" type="checkbox">
+      `).join("")}
+    </div>
+    `)
+  }
+
   $.getJSON('data.json', function(data) {
     data.products.forEach(product => {
       products.push(product)
@@ -133,15 +165,28 @@ $(document).ready(function() {
         }
         if (option.name === 'Colour') {
           option.values.forEach(value => {
-            getCollection(value.toLowerCase(), colors)
+            getCollection(value.toLowerCase(), colours)
           })
         }
       })
     });
   })
   .then(() => {
-    renderProducts(filterProducts({
+    // renderProducts(filterProducts({
 
-      },products), productContainer)
+    // },products), productContainer);
+    renderUi(prices, sizes, colours, categories, uiContainer)
+    $('.price-range').slider({
+      step: 0.01,
+      range: true,
+      min: Math.min(...prices),
+      max: Math.max(...prices),
+      values: prices,
+      slide(event, ui) {
+        $('#price-range').val(parseFloat(ui.values[0]) + '-' + parseFloat(ui.values[1]))
+      }
+    });
+    $('.price-range').slider('values', 1, Math.max(...prices))
+    $('#price-range').val($('.price-range').slider('values', 0) + '-' + $('.price-range').slider('values', 1));
   })
 })
