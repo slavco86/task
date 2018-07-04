@@ -99,7 +99,7 @@
             <div class="image">
               <img src="${product.image.src}" alt="">
             </div>
-          <span class="product-title">${product.title}</span>
+          <span class="product-title">${product.title.toLowerCase()}</span>
           <div class="prices">
             <span class="now-price">${product.variants[0].price}</span>
             ${(product.variants[0].compare_at_price === null) ? '' :
