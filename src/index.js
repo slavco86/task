@@ -6,7 +6,12 @@
   const colours = []
   const sizes = []
   const categories = []
-  const filterOptions = {sizes: []}
+  const filterOptions = {
+    sizes: [],
+    prices: [],
+    colours: [],
+    categories: []
+  }
 
   function getCollection(value, array) {
     if ($.inArray(value, array) === -1) {
@@ -147,6 +152,13 @@
     $('.size-select input').change((data) => {
       (data.currentTarget.checked) ? filterOptions.sizes.push($(data.target).val()) : filterOptions.sizes.splice(filterOptions.sizes.indexOf(data.currentTarget.value), 1)
     })
+    $('.colours-select input').change((data) => {
+      (data.currentTarget.checked) ? filterOptions.colours.push($(data.target).val()) : filterOptions.colours.splice(filterOptions.colours.indexOf(data.currentTarget.value), 1)
+    })
+    $('.categories-select input').change((data) => {
+      (data.currentTarget.checked) ? filterOptions.categories.push($(data.target).val()) : filterOptions.categories.splice(filterOptions.categories.indexOf(data.currentTarget.value), 1)
+    })
+
   }
 
   $.getJSON('data.json', function(data) {
@@ -189,7 +201,6 @@
     $('#price-range').val($('.price-range').slider('values', 0) + '-' + $('.price-range').slider('values', 1));
     $('#price-range').change(() => {
       filterOptions.prices = $('#price-range').val().split(/-/)
-      console.info(filterOptions.prices);
     })
     console.info(filterOptions);
   })
