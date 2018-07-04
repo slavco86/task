@@ -6,8 +6,11 @@ body {
 }
 .c-container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    align-items: center;
   }
 }
 .products {
@@ -18,12 +21,18 @@ body {
 .product {
   flex-basis: 20%;
   margin: 1rem;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    flex-basis: 40%;
+  }
 }
 
 .product .image {
   position: relative;
   padding-bottom: calc(2098 / 1399 * 100%);
-  background: lightgrey
+  margin-bottom: 1rem;
+  background: lightgrey;
+  overflow: hidden;
 }
 .product .image img {
   position: absolute;
@@ -35,12 +44,24 @@ body {
 }
 .product-title {
   text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.prices {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.now-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.savings {
+  color: red;
+  font-weight: bold;
+  display: inline-block;
 }
 .sizes {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: baseline;
-  // align-items: baseline;
+  margin-bottom: 60px;
 }
 .size {
   display: inline-flex;
@@ -49,8 +70,11 @@ body {
   border: 1px solid;
   height: 30px;
   width: 30px;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   background: lightgrey;
+}
+.colours {
+  margin: 1rem 0;
 }
 .colour {
   border: 2px solid;
@@ -58,6 +82,9 @@ body {
   width: 15px;
   height: 15px;
   display: inline-block;
+  margin: 5px 5px 5px 0;
+  position: absolute;
+  bottom: 30px;
 }
 
 .ui {

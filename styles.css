@@ -7,6 +7,12 @@ body h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media only screen and (max-width: 600px) {
@@ -15,6 +21,9 @@ body h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -31,12 +40,22 @@ body h1 {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   margin: 1rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
 }
 
 .product .image {
   position: relative;
   padding-bottom: calc(2098 / 1399 * 100%);
+  margin-bottom: 1rem;
   background: lightgrey;
+  overflow: hidden;
 }
 
 .product .image img {
@@ -50,6 +69,27 @@ body h1 {
 
 .product-title {
   text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.prices {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.now-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.savings {
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.sizes {
+  margin-bottom: 60px;
 }
 
 .size {
@@ -65,8 +105,12 @@ body h1 {
   border: 1px solid;
   height: 30px;
   width: 30px;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   background: lightgrey;
+}
+
+.colours {
+  margin: 1rem 0;
 }
 
 .colour {
@@ -75,6 +119,9 @@ body h1 {
   width: 15px;
   height: 15px;
   display: inline-block;
+  margin: 5px 5px 5px 0;
+  position: absolute;
+  bottom: 30px;
 }
 
 .ui {
